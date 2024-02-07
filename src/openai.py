@@ -2,6 +2,8 @@ import openai
 OPENAI_API_KEY = "openai키"
 openai.api_key = OPENAI_API_KEY
 
+
+messages=[]
 while True:
     content = input("User: ")
     original_content = content  # 원본 입력을 유지
