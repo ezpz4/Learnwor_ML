@@ -1,5 +1,5 @@
 import openai
-OPENAI_API_KEY = "openai키"
+OPENAI_API_KEY = "key"
 openai.api_key = OPENAI_API_KEY
 
 
@@ -10,7 +10,8 @@ while True:
 
     messages.append({"role": "user", "content": content + " 어려운 단어만 쉬운 단어로 풀어적어. 문장은 수정하지 말고"})
 
-    completion = openai.chat.completions.create(
+    # completion = openai.chat.completions.create(
+    completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=messages
     )
