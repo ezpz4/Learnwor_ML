@@ -1,10 +1,10 @@
 import pandas as pd
-from example import training
-from example2 import execute
+from training import training
+from execute import execute
 from crawling import fetch_news_article
 import re
 
-data = pd.read_csv('sc_dataset2.csv')
+data = pd.read_csv('sc_dataset3.csv')
 
 training()
 
@@ -24,15 +24,9 @@ def find_word(input_sentence):
 
 if __name__ == "__main__":
     input_sentence = input("문장 입력: ")
-    #paragraph = fetch_news_article(input_sentence)
-    #문장 자르기
-    #sentences = input_sentence.split('. ')
-    #sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\!)\s', paragraph)
-    sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\!)\s', input_sentence)
+    paragraph = fetch_news_article(input_sentence)
+    sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\!)\s', paragraph)
 
-    print(sentences)
-
-    print("온 점 기준으로 문장 자르기")
     for sentence in sentences:
         find_word(sentence)
 

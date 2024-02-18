@@ -7,7 +7,7 @@ from joblib import dump
 
 def training():
     # CSV 파일 읽기
-    df = pd.read_csv('sc_dataset2.csv')  
+    df = pd.read_csv('sc_dataset3.csv')  
     
     # 결측값이 포함된 행 제거
     df.dropna(inplace=True)
