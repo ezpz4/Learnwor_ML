@@ -31,6 +31,6 @@ model.fit(X_train, y_train)
 print("테스트 세트 점수: {:.2f}".format(model.score(X_test, y_test)))
 
 # 새로운 데이터에 대한 예측
-new_words = ["가격대"]  # 실제 예측하고 싶은 어려운 단어 리스트
+new_words = ["공매"]  # 실제 예측하고 싶은 어려운 단어 리스트
 predicted_easy_words = model.predict(new_words)
 print("예측된 쉬운 단어:", predicted_easy_words)
