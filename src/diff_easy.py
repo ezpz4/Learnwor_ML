@@ -9,7 +9,7 @@ df = pd.read_csv('../Learnwor_ML/sc_dataset3.csv', encoding='utf-8')
 hw_list=[]
 
 def find_and_replace(input_sentence):
-    okt = Okt() 
+    okt = Okt()
     words = okt.morphs(input_sentence)  # 문장을 형태소 단위로 분리
 
     # 어려운 단어를 찾아서 대체
